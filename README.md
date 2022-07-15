@@ -1,64 +1,76 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Skills GE
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[TODO](./todo.md)
 
-## About Laravel test
+## Secrétaire
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Le secrétaire du forem d’un login et d’un mot de passe
+Il doit pouvoir créer une formation
+Il spécifie les infos de la formation:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   nom de la formation: ingrwf11
+-   choix du centre
+-   date d’entrée en formation
+-   formateur: exemple Olivier Belery
+-   encoder les stagiaires qui y sont inscrits (bdd)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Stagiaire
 
-## Learning Laravel
+Login (existe déjà: fait par la secrétaire)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Formuaire avec:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   Formation auquel il est inscrit
+-   Dates pré-complétée,
+-   date de la GE (date de connexion)
+-   le centre cepegra pré-complété
+-   le formateur pré-complété
+-   le stagiaire (nom-prénom) pré-complété
 
-## Laravel Sponsors
+## Savoir faire comportementeaux
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Pour chaque thématique
 
-### Premium Partners
+-   une mise en situation
+-   cocher les réponses d’auto-évaluation 1-2-3-4
+-   la mise en situation et les réponses doivent pouvoir être modifiées par la secrétaire
+-   data visualisation afficher les résultats avec le radar (charts.js, graphique, svg, canvas…)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Structure du projet
 
-## Contributing
+### Partie Stagiaire
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+url : `site_url/`.
 
-## Code of Conduct
+-   liste des fiches au click d'une fiche:
+    -   fomrulaire pré-complèté,
+    -   auto évaluation avec graphique qui bouge
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Partie secrétaire
 
-## Security Vulnerabilities
+url : `site_url/admin`.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+La homepage est une page à plusieurs choix:
 
-## License
+-   Modifier une fiche savoir faire
+    -   index qui visualise les différentes fiches,
+    -   Edit page
+-   Création des formations
+    -   nom, centre, date formateur, encodage des stagiaires
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Pages:
+
+### Admin
+
+url : `site_url/admin/`.
+
+url : `site_url/admin/formations`.
+url : `site_url/admin/formations/create`.
+
+url : `site_url/admin/knowledge-forms`.
+url : `site_url/admin/knowledge-forms/edit`.
+
+### Stagiaire
+
+url : `site_url/`.
+url : `site_url/{ge_id}/edit`.
