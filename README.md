@@ -62,15 +62,15 @@ La homepage est une page à plusieurs choix:
 
 ### Admin
 
-url : `site_url/admin/`.
+-   url : `site_url/admin/`.
 
-url : `site_url/admin/formations`.
-url : `site_url/admin/formations/create`.
+-   url : `site_url/admin/formations`.
+-   url : `site_url/admin/formations/create`.
 
-url : `site_url/admin/knowledge-forms`.
-url : `site_url/admin/knowledge-forms/edit`.
+-   url : `site_url/admin/knowledge-forms`.
+-   url : `site_url/admin/knowledge-forms/edit`.
 
 ### Stagiaire
 
-url : `site_url/`.
-url : `site_url/{ge_id}/edit`.
+-   url : `site_url/`.
+-   url : `site_url/{ge_id}/edit`.
