@@ -63,9 +63,14 @@ La homepage est une page à plusieurs choix:
 ### Admin
 
 -   url : `site_url/admin/`.
+-   url : `site_url/admin/login`.
+
+---
 
 -   url : `site_url/admin/formations`.
 -   url : `site_url/admin/formations/create`.
+
+---
 
 -   url : `site_url/admin/knowledge-forms`.
 -   url : `site_url/admin/knowledge-forms/edit`.
@@ -73,4 +78,8 @@ La homepage est une page à plusieurs choix:
 ### Stagiaire
 
 -   url : `site_url/`.
+-   url : `site_url/login`.
+
+---
+
 -   url : `site_url/{ge_id}/edit`.
