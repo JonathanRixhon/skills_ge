@@ -2,7 +2,7 @@
 
     <x-slot name="mainContent">
         <div id="app" class="panel max-w-2xl w-full m-auto">
-            <section>
+            {{-- <section>
                 <h2 class="h2">Rechercher les participants</h2>
                 <div>
                     <x-input name="session" type="select">
@@ -21,7 +21,7 @@
                 <ul class="ml-2">
                     <li>Nom Prénom</li>
                 </ul>
-            </section>
+            </section> --}}
         </div>
     </x-slot>
 
