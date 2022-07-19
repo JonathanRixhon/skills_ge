@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Job;
+use App\Models\Center;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,7 +22,8 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('admin'),
         ]);
 
-        \App\Models\Centers::factory()->create(['name' => 'Cepegra']);
-        \App\Models\Centers::factory()->create(['name' => 'Liège']);
+        Center::factory()->create(['name' => 'Cepegra']);
+        Center::factory()->create(['name' => 'Liège']);
+        Job::factory()->create();
     }
 }
