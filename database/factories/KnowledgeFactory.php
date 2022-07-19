@@ -2,12 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\Job;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class KnwoledgeFactory extends Factory
+class knowledgeFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +18,6 @@ class KnwoledgeFactory extends Factory
     public function definition()
     {
         return [
-            //
         ];
     }
 }

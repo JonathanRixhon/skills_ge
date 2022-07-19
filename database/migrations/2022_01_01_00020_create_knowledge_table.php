@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('job_id');
             $table->text('definition');
             $table->enum('theme', [
-                'orgranisation',
+                'organisation',
                 'analyse',
                 'curiosity',
                 'autonomy',

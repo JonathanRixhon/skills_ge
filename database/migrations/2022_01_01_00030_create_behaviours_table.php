@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
+        //les choix en fonction des knwoledge
         Schema::create('behaviours', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('text');
             $table->tinyInteger('level');
             $table->unsignedBigInteger('knowledge_id');
+            $table->timestamps();
 
             $table->foreign('knowledge_id')->references('id')->on('knowledge')->onDelete('cascade');
         });
