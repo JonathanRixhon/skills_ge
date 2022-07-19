@@ -1,7 +1,7 @@
 <x-layout>
 
     <x-slot name="mainContent">
-        <div id="app" class="panel max-w-2xl w-full m-auto">
+        <div id="app" class="panel max-w-2xl w-full m-auto" data-user="{{ auth()->user()->email }}">
             {{-- <section>
                 <h2 class="h2">Rechercher les participants</h2>
                 <div>
