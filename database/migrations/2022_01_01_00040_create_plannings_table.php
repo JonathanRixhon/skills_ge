@@ -13,11 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('knowledge', function (Blueprint $table) {
+        Schema::create('plannings', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('label');
+            $table->dateTime('date');
+            $table->unsignedBigInteger('job_id');
+            $table->unsignedBigInteger('center_id');
+            $table->timestamps();
 
+
+            $table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');
+            $table->foreign('center_id')->references('id')->on('centers')->onDelete('cascade');
         });
     }
 
@@ -28,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('knowledge');
+        Schema::dropIfExists('plannings');
     }
 };

@@ -13,9 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('evaluations', function (Blueprint $table) {
+        Schema::create('behaviours', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('text');
+            $table->tinyInteger('level');
+            $table->unsignedBigInteger('knowledge_id');
+
+            $table->foreign('knowledge_id')->references('id')->on('knowledge')->onDelete('cascade');
         });
     }
 
@@ -26,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('evaluations');
+        Schema::dropIfExists('behaviours');
     }
 };
